@@ -1,9 +1,10 @@
 package application;
 
+import interfaces.NavegadorInternet;
 import interfaces.ReprodutorMusical;
 import interfaces.Telefone;
 
-public class Iphone implements Telefone, ReprodutorMusical {
+public class Iphone implements Telefone, ReprodutorMusical, NavegadorInternet {
   @Override
   public void ligar() {
     System.out.println("Fazendo ligação");
@@ -32,5 +33,20 @@ public class Iphone implements Telefone, ReprodutorMusical {
   @Override
   public void selecionarMusica() {
     System.out.println("Selecionando música");
+  }
+
+  @Override
+  public void exibirPagina() {
+    System.out.println("Exibindo página");
+  }
+
+  @Override
+  public void adicinarNovaAba() {
+    System.out.println("Adicionando nova aba");
+  }
+
+  @Override
+  public void atualizarPagina() {
+    System.out.println("atualizando página");
   }
 }
